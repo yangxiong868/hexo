@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Josh Yang
+title: Josh's Blog
 subtitle:
 description:
 author: Josh Yang
@@ -73,8 +73,8 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 Plugins: 
-- hexo-generator-feed
-- hexo-generator-sitemap
+  - hexo-generator-feed
+  - hexo-generator-sitemap
 #Feed Atom
 feed:
   type: atom
@@ -97,3 +97,9 @@ deploy:
   repository: https://github.com/yangxiong868/yangxiong868.github.io.git
   #repository: git@github.com:yangxiong868/yangxiong868.github.io.git
   branch: master
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
