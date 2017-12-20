@@ -1,11 +1,11 @@
 ---
-title: centos安装vim教程
+title: Linux基础-VIM安装教程
 date: 2017-10-06 17:36:06
 categories:
 - linux基础
 tags:
 - linux
-- vim
+- linux基础
 ---
 
 ### yum安装Vim

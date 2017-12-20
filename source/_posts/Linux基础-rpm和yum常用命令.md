@@ -1,12 +1,11 @@
 ---
-title: '[Linux基础]rpm和yum常用命令'
+title: 'Linux基础-rpm和yum常用命令'
 date: 2017-10-06 21:31:01
 categories:
-  - linux基础
+- Linux基础
 tags:
-  - linux
-  - rpm
-  - yum
+- Linux
+- Linux基础
 ---
 ### rpm常用命令
 安装一个rpm包
