@@ -94,7 +94,8 @@ theme: next
 deploy:
   #type: github
   type: git
-  repository: https://github.com/yangxiong868/yangxiong868.github.io.git
+  repository: https://yangxiong868:yx24719868@github.com/yangxiong868/yangxiong868.github.io.git
+  #repository: https://github.com/yangxiong868/yangxiong868.github.io.git
   #repository: git@github.com:yangxiong868/yangxiong868.github.io.git
   branch: master
 
