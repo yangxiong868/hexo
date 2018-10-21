@@ -7,11 +7,10 @@ tags:
 - Brpc
 - Json
 ---
-### [Brpc] json和protobuf双向转换
-#### json2pb介绍
+### json2pb介绍
 brpc支持json和protobuf间的双向转化，实现于[json2pb](https://github.com/brpc/brpc/tree/master/src/json2pb/)。
 
-#### json2pb接口
+### json2pb接口
 json2pb提供json到protobuf接口函数：`JsonToProtoMessage`，包含头文件：`<json2pb/json_to_pb.h>`，下面列举一个接口定义如下：
 ``` cpp
 bool JsonToProtoMessage(const std::string& json,
@@ -27,7 +26,7 @@ bool ProtoMessageToJson(const google::protobuf::Message& message,
                         std::string* error = NULL);
 ```
 
-#### 	json2pb应用
+### json2pb应用
 brpc json2pb的接口应用示例如下，addressbook.proto在brpc源码test文件中。
 ```cpp
 #include <gflags/gflags.h>
@@ -172,6 +171,6 @@ E1019 16:09:41.196838 26059 json2pb_test.cpp:84] result: 1ProtoBuf:person {
 }
 ```
 
-###参考链接：
-1. [brpc json2pb 介绍](https://github.com/brpc/brpc/blob/master/docs/cn/json2pb.md)
-2. [brpc json2pb 源码](https://github.com/brpc/brpc/tree/master/src/json2pb/)
+### 参考链接
+1.[brpc json2pb 介绍](https://github.com/brpc/brpc/blob/master/docs/cn/json2pb.md)
+2.[brpc json2pb 源码](https://github.com/brpc/brpc/tree/master/src/json2pb/)
