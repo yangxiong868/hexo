@@ -196,6 +196,42 @@ The time now is 2016-12-19 10:39:24
 The time just was 2016-12-19 10:39:24
 ```
 
-参考链接：
+获取当前时间戳和字符串形式时间转换时间戳代码如下：
+``` cpp
+#include <iostream>
+#include <time.h>
+
+time_t get_timestamp(const char *date = NULL,
+                     const char *format = "%Y-%m-%d %H:%M:%S") {
+  struct tm tm = {0};
+  if (!date) {
+    return time(NULL);
+    // return absl::ToUnixMillis(absl::Now()); // 毫秒
+    // return absl::ToTimeT(absl::Now()); // 秒
+  }
+  strptime(date, format, &tm);
+  return mktime(&tm);
+}
+
+int main(void) {
+  char date[] = "2018-02-10 19:00:00";
+  time_t now = get_timestamp(date);
+  std::cout << "date " << date << " to timestamp " << now << std::endl;
+  
+  now = get_timestamp();
+  std::cout << "now timestamp " << now << std::endl;
+
+  return 0;
+}
+
+```
+程序运行结果如下：
+```
+date 2018-02-10 19:00:00 to timestamp 1518260400
+now timestamp 1521676868
+```
+
+###参考链接：
 1. http://sodino.com/2015/03/15/c-time/
 2. http://blog.csdn.net/yasaken/article/details/7429506
+3. Unix时间戳http://tool.chinaz.com/Tools/unixtime.aspx
